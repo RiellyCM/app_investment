@@ -9,22 +9,23 @@
   </head>
 
   <body>
+    <div class="conteiner">
+      <div class="box">
+          <h1 class="title_user">Cadastro de usuário</h1>
+          <form class="form">
+              <hr class="divider" />
+              <label class="label" for="name">Nome</label>
+              <input class="input" type="text" id="name" required>
 
-    <main>
-        <form>
-              <label for="name">Nome</label>
-              <input type="text" id="name">
+              <label class="label" for="email">Email</label>
+              <input class="input" type="email" id="email" required>
 
-              <label for="email">Email</label>
-              <input type="text" id="email">
+              <label class="label" for="password">Senha</label>
+              <input class="input" type="password" id="password" required minlength="4">
 
-              <label for="password">Senha</label>
-              <input type="password" id="password">
-
-              <input type="submit" value="Cadastre-se">
-
-        </form>
-    </main>
-
+              <button class="button" type="submit"> Cadastre-se </button>
+          </form>
+      </div>
+    </div>
   </body>
 </html>
