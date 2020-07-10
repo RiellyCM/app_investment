@@ -12,20 +12,22 @@
     <div class="conteiner">
       <div class="box">
           <h1 class="title_user">Cadastro de usuário</h1>
-          <form class="form">
+          <form class="form js-form" method="post">
               <hr class="divider" />
               <label class="label" for="name">Nome</label>
-              <input class="input" type="text" id="name" required>
+              <input class="input" type="text" name="name" required>
 
               <label class="label" for="email">Email</label>
-              <input class="input" type="email" id="email" required>
+              <input class="input" type="email" name="email" required>
 
               <label class="label" for="password">Senha</label>
-              <input class="input" type="password" id="password" required minlength="4">
+              <input class="input" type="password" name="password" required minlength="4">
 
               <button class="button" type="submit"> Cadastre-se </button>
           </form>
       </div>
     </div>
+
+    <script src="script.js"> </script>
   </body>
 </html>
