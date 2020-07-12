@@ -18,7 +18,7 @@ form.addEventListener("submit", (event) => {
 
   //preparando os dados para requisição//
   const registerFetchInfo = {
-    method: 'POST', 
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
@@ -33,6 +33,7 @@ form.addEventListener("submit", (event) => {
                 if (response.status === 201) {
                     alert('Usuario criado com sucesso!')
 
+                    window.location.href = "../user_login/index.html"
                 } else {
                     console.log(data.message);
                 }

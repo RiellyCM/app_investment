@@ -58,3 +58,9 @@ body {
   border-radius: 5%;
   padding: 10px;
 }
+
+.button_login {
+  color: #fa9f0c;
+  margin-left: 20px;
+  text-decoration: none;
+}
