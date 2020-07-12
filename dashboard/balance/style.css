@@ -1,0 +1,34 @@
+body {
+    font: 14px "Roboto", sans-serif;
+    background: #fafaff;
+  }
+
+.conteiner_dashboard{
+    height: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.box_balance {
+    height: 100%;
+    width: 350px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    padding: 20px 30px;
+}
+
+.title_balance {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+}
+
+.subtitle-balance {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 10px;
+}

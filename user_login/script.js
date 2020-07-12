@@ -23,10 +23,11 @@ form.addEventListener("submit", (event) => {
         response.json()
             .then((data) => {
                 if (response.status === 200) {
-                    alert('Usuário logado com sucesso!')
+                  localStorage.setItem('token', data.token)
 
+                  window.location.href = "../dashboard/index.html"
                 } else {
-                    console.log(data.message);
+                  alert(data.messager)
                 }
             })
     })
