@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="price/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densityDpi=device-dpi" />
   </head>
 
@@ -12,24 +11,53 @@
 
     <div class="conteiner_dashboard">
 
-      <div class="box_balance">
-        <label class="title_balance"> Saldo disponível R$: </label>
-        <input class="subtitle-balance js-balance" disabled/>
+      <div class="box">
+        <label class="title"> Saldo disponível R$: </label>
+        <input class="subtitle js-balance" disabled/>
       </div>
+
+      <div class="box">
+        <label class="title"> Valor compra </label>
+        <input class="subtitle js-buy" disabled/>
+
+        <label class="title"> Valor venda </label>
+        <input class="subtitle js-sell" disabled/>
+      </div>
+
+      <div class="box">
+        <label class="title"> bitcoins comprados </label>
+        <input class="subtitle js-volume-buy" disabled/>
+
+        <label class="title"> bitcoins vendidos </label>
+        <input class="subtitle js-volume-sell" disabled/>
+      </div>
+
+      <div class="box">
+        <label class="title"> Data de compra </label>
+        <input class="subtitle js-volume-buy" disabled/>
+
+        <label class="title"> Valor investido </label>
+        <input class="subtitle js-volume-sell" disabled/>
+
+        <label class="title"> Valor bitcoins </label>
+        <input class="subtitle js-volume-sell" disabled/>
+
+        <label class="title"> variação do preço  </label>
+        <input class="subtitle js-volume-sell" disabled/>
+
+        <label class="title"> valor bruto do investimento  </label>
+        <input class="subtitle js-volume-sell" disabled/>
+      </div>
+
+      <canvas class="graph js-history"></canvas>
     </div>
 
-      <div class="box_buy">
-        <label class="title_buy"> Valor compra </label>
-        <input class="subtitle-buy js-buy" disabled/>
-      </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="balance/script.js"></script>
+    <script src="price/script.js"></script>
+    <script src="volume/script.js"></script>
+    <script src="history/script.js"></script>
+    <script src="position/script.js"></script>
 
-      <div class="box_sell">
-        <label class="title_sell"> Valor venda </label>
-        <input class="subtitle-sell js-sell" disabled/>
-      </div>
-    </div>
-
-    <script src="balance/script.js"> </script>
-    <script src="price/script.js"> </script>
   </body>
 </html>
