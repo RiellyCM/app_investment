@@ -3,7 +3,7 @@ const fetchBalance = () => {
   const token = localStorage.getItem('token');
 
   const balanceFetchInfo = {
-      method: 'GET', 
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
@@ -15,7 +15,7 @@ const fetchBalance = () => {
         response.json()
             .then((data) => {
                 if (response.status === 200) {
-                    balance.value = data.balance;
+                    balance.innerHTML = data.balance;
                 } else {
                     console.log(data.message);
                 }
@@ -23,7 +23,7 @@ const fetchBalance = () => {
     })
     .catch((error) => {
       console.log(error);
-    });  
+    });
 }
 
 fetchBalance();

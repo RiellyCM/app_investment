@@ -1,9 +1,9 @@
-body{
-  background-color: #7681f1;
+body {
+    background-color: #383b44;
 }
+
 .conteiner_dashboard{
     height: 100%;
-    padding: 50px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,32 +11,66 @@ body{
     align-content: center;
 }
 
-.box {
-    height: 100%;
-    width: 350px;
-    margin: 15px;
-    border-radius: 6px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
-    padding: 20px 30px;
-    background-color: #f5f6fa;
+.box_main {
+    width: 100%;
+    margin: 10px;
+    background-color: #282f46;
+    border-radius: 20px 20px 5px 5px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 1;
+}
+
+.sub_conteiner{
+    display: flex;
+    width: 100%;
+}
+
+.box_main--style {
+    width: 33%;
+}
+
+.box_main::before {
+    position: absolute;
+    background-color: rgba(136,84,195,0.7);
+    border-radius: 20px 20px 5px 5px;
+    width: 100%;
+    height: 20px;
+    z-index: -1;
+    content:"";
+}
+
+.box_group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .title {
     display: block;
-    font-size: 20px;
-    margin: 0 0 10px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 25px;
+    padding: 10px;
+    color: #994daa;
     text-transform: uppercase;
 }
 
 .subtitle {
-    display: block;
-    margin: 0 0 20px;
-    padding: 10px 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    color: #c2c6d0;
 }
 
 .graph {
     background-color: #FFFAF0;
-    width: 80%;
+    width: 100%;
     margin: auto;
     padding-bottom: 10px;
 }
