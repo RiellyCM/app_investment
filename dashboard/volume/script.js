@@ -16,8 +16,8 @@ const fetchvolume = () => {
         response.json()
             .then((data) => {
                 if (response.status === 201) {
-                    volumeBuy.value = data.buy;
-                    volumeSell.value = data.sell;
+                    volumeBuy.innerHTML = data.buy;
+                    volumeSell.innerHTML = data.sell;
                 } else {
                     console.log(data.message);
                 }

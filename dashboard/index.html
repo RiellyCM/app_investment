@@ -11,42 +11,66 @@
 
     <div class="conteiner_dashboard">
 
-      <div class="box">
-        <label class="title"> Saldo disponível R$: </label>
-        <input class="subtitle js-balance" disabled/>
+      <div class="box_main">
+
+        <div class="box_group">
+          <p class="title"> Saldo R$: </p>
+          <p class="subtitle js-balance"> </p>
+        </div>
+
+        <div class="box_group">
+          <p class="title"> Valor compra </p>
+          <p class="subtitle js-buy"> </p>
+        </div>
+
+        <div class="box_group">
+          <p class="title"> Valor venda </p>
+          <p class="subtitle js-sell">  </p>
+        </div>
+
       </div>
 
-      <div class="box">
-        <label class="title"> Valor compra </label>
-        <input class="subtitle js-buy" disabled/>
+      <div class="sub_conteiner">
+        <div class="box_main box_main--style">
+            <div class="box_group">
+              <p class="title"> Data de compra </p>
+              <p class="subtitle js-volume-buy"></p>
+            </div>
 
-        <label class="title"> Valor venda </label>
-        <input class="subtitle js-sell" disabled/>
-      </div>
+            <div class="box_group">
+              <p class="title"> Valor investido </p>
+              <p class="subtitle js-volume-sell"> </p>
+            </div>
+        </div>
 
-      <div class="box">
-        <label class="title"> bitcoins comprados </label>
-        <input class="subtitle js-volume-buy" disabled/>
+        <div class="box_main box_main--style">
+          <div class="box_group">
+            <p class="title"> Valor bitcoins </p>
+            <p class="subtitle js-volume-sell"> </p>
+          </div>
 
-        <label class="title"> bitcoins vendidos </label>
-        <input class="subtitle js-volume-sell" disabled/>
-      </div>
+          <div class="box_group">
+            <p class="title"> variação do preço </p>
+            <p class="subtitle js-volume-sell"> </p>
+          </div>
 
-      <div class="box">
-        <label class="title"> Data de compra </label>
-        <input class="subtitle js-volume-buy" disabled/>
+          <div class="box_group">
+            <p class="title"> valor bruto  </p>
+            <p class="subtitle js-volume-sell"></p>
+          </div>
+        </div>
 
-        <label class="title"> Valor investido </label>
-        <input class="subtitle js-volume-sell" disabled/>
+        <div class="box_main box_main--style">
+          <div class="box_group ">
+            <p class="title"> bitcoins comprados </p>
+            <p class="subtitle js-volume-buy"> </p>
+          </div>
 
-        <label class="title"> Valor bitcoins </label>
-        <input class="subtitle js-volume-sell" disabled/>
-
-        <label class="title"> variação do preço  </label>
-        <input class="subtitle js-volume-sell" disabled/>
-
-        <label class="title"> valor bruto do investimento  </label>
-        <input class="subtitle js-volume-sell" disabled/>
+          <div class="box_group">
+            <p class="title"> bitcoins vendidos </p>
+            <p class="subtitle js-volume-sell"> </p>
+          </div>
+        </div>
       </div>
 
       <canvas class="graph js-history"></canvas>

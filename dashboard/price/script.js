@@ -4,7 +4,7 @@ const fetchprice = () => {
   const token = localStorage.getItem('token');
 
   const priceFetchInfo = {
-      method: 'GET', 
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
@@ -16,8 +16,8 @@ const fetchprice = () => {
         response.json()
             .then((data) => {
                 if (response.status === 201) {
-                    buy.value = data.buy;
-                    sell.value = data.sell;
+                    buy.innerHTML = data.buy;
+                    sell.innerHTML = data.sell;
                 } else {
                     console.log(data.message);
                 }
