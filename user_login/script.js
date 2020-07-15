@@ -27,7 +27,7 @@ form.addEventListener("submit", (event) => {
 
                   window.location.href = "../dashboard/index.html"
                 } else {
-                  alert(data.messager)
+                  alert(data.message)
                 }
             })
     })
