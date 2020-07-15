@@ -1,29 +1,30 @@
-const form = document.querySelector(".js-form-login");
+const deposit = document.querySelector(".js-form-deposit");
+const token = localStorage.getItem('token');
 
-form.addEventListener("submit", (event) => {
+deposit.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const formData = new FormData(form);
+  const formData = new FormData(deposit);
 
   const data = {
-    email: formData.get("email"),
-    password: formData.get("password")
+    amount: Number(formData.get("amount"))
   };
 
-  const loginFetchInfo = {
+  const depositFetchInfo = {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`,
     },
     body: JSON.stringify(data),
   };
 
-  fetch("https://desafio-api.devzz.ninja/login", loginFetchInfo)
+  fetch("https://desafio-api.devzz.ninja/account/deposit", depositFetchInfo)
     .then((response) => {
         response.json()
             .then((data) => {
                 if (response.status === 200) {
-                  localStorage.setItem('token', data.token)
+                  alert(`Seu saldo atual é ${data.balance}`);
 
                   window.location.href = "../dashboard/index.html"
                 } else {
