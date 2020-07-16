@@ -1,38 +1,30 @@
-const deposit = document.querySelector(".js-form-deposit");
+const depositForm = document.querySelector(".js-form-deposit");
 const token = localStorage.getItem('token');
 
-deposit.addEventListener("submit", (event) => {
-  event.preventDefault();
+  function getAmountValue() {
+      const formData = new FormData(depositForm);
+      const amountValue = Number(formData.get("amount"));
 
-  const formData = new FormData(deposit);
+      return amountValue;
+  }
 
-  const data = {
-    amount: Number(formData.get("amount"))
+  async function handleUserConfirmation() {
+    const amountValue = getAmountValue();
+    const data = await postDeposit(amountValue);
+
+
+    alert(`Depósito efetuado com sucesso!
+      Seu saldo atual é ${data.balance}`);
+    window.location.href = "../dashboard/index.html";
+  }
+
+  async function handleFormSubmit(event) {
+    event.preventDefault();
+
+    const message = "Confirmar depósito?";
+
+    if (window.confirm(message)) {
+        handleUserConfirmation();
+    }
   };
-
-  const depositFetchInfo = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`,
-    },
-    body: JSON.stringify(data),
-  };
-
-  fetch("https://desafio-api.devzz.ninja/account/deposit", depositFetchInfo)
-    .then((response) => {
-        response.json()
-            .then((data) => {
-                if (response.status === 201) {
-                  alert(`Seu saldo atual é ${data.balance}`);
-
-                  window.location.href = "../dashboard/index.html"
-                } else {
-                  alert(data.message)
-                }
-            })
-    })
-    .catch((error) => {
-      console.log(error);
-    })
-  });
+depositForm.addEventListener("submit", handleFormSubmit);
