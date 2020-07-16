@@ -1,4 +1,4 @@
-const postPurchase = (amountValue, successCallback) => {
+async function postPurchase(amountValue) {
   const token = localStorage.getItem('token');
 
   const requestBody = {
@@ -14,18 +14,16 @@ const postPurchase = (amountValue, successCallback) => {
     body: JSON.stringify(requestBody),
   };
 
-  fetch("https://desafio-api.devzz.ninja/btc/purchase", buyFetchInfo)
-    .then((response) => {
-        response.json()
-            .then((data) => {
-                if (response.status === 201) {
-                  successCallback();
-                } else {
-                  alert(data.message)
-                }
-            })
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  try {
+    const response = await fetch("https://desafio-api.devzz.ninja/btc/purchase", buyFetchInfo)
+    const data = await response.json();
+
+    if (response.status === 201) {
+      return data;
+    } else {
+      console.log(data.message)
+    }
+  } catch (error) {
+    console.log(error);
+  }
 };
