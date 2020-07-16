@@ -23,7 +23,7 @@ deposit.addEventListener("submit", (event) => {
     .then((response) => {
         response.json()
             .then((data) => {
-                if (response.status === 200) {
+                if (response.status === 201) {
                   alert(`Seu saldo atual é ${data.balance}`);
 
                   window.location.href = "../dashboard/index.html"
