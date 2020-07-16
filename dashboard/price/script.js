@@ -1,30 +1,9 @@
-const fetchprice = () => {
+const setValues = (data) => {
   const buy = document.querySelector(".js-buy");
   const sell = document.querySelector(".js-sell");
-  const token = localStorage.getItem('token');
 
-  const priceFetchInfo = {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
-      },
-    };
+  buy.innerHTML = data.buy;
+  sell.innerHTML = data.sell;
+};
 
-  fetch("https://desafio-api.devzz.ninja/btc/price", priceFetchInfo)
-    .then((response) => {
-        response.json()
-            .then((data) => {
-                if (response.status === 201) {
-                    buy.innerHTML = data.buy;
-                    sell.innerHTML = data.sell;
-                } else {
-                    console.log(data.message);
-                }
-            })
-    })
-    .catch((error) => {
-      console.log(error);
-  });
-}
-fetchprice();
+getPrice(setValues);

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Comprar</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densityDpi=device-dpi" />
+  </head>
+
+  <body>
+    <div class="conteiner_buy">
+      <div class="box_buy">
+        <form class="form js-form-buy" method="post">
+
+          <label class="label" for="amount" > Quanto você deseja comprar? </label>
+          <input class="input" type="text" name="amount" required>
+
+          <button class="button_buy" type="submit"> Comprar </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../API/postPurchase.js"></script>
+    <script src="../API/getPrice.js"></script>
+    <script src="script.js"> </script>
+  </body>
+</html>
