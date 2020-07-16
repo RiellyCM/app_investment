@@ -1,4 +1,4 @@
-async function setValues() {
+async function setBuySellValues() {
   const buyEl = document.querySelector(".js-buy");
   const sellEl = document.querySelector(".js-sell");
 
@@ -8,4 +8,4 @@ async function setValues() {
   sellEl.innerHTML = sell;
 };
 
-setValues();
+setBuySellValues();
