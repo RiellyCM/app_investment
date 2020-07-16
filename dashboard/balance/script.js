@@ -1,29 +1,9 @@
-const fetchBalance = () => {
-  const balance = document.querySelector(".js-balance");
-  const token = localStorage.getItem('token');
+async function setBalanceValue() {
+  const balanceEl = document.querySelector(".js-balance");
 
-  const balanceFetchInfo = {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
-      },
-    };
+  const { balance } = await getBalance();
 
-  fetch("https://desafio-api.devzz.ninja/account/balance", balanceFetchInfo)
-    .then((response) => {
-        response.json()
-            .then((data) => {
-                if (response.status === 200) {
-                    balance.innerHTML = data.balance;
-                } else {
-                    console.log(data.message);
-                }
-            })
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-}
+  balanceEl.innerHTML = balance;
+};
 
-fetchBalance();
+setBalanceValue();
