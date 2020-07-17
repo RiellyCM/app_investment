@@ -1,9 +1,11 @@
-const setValues = (data) => {
-  const buy = document.querySelector(".js-buy");
-  const sell = document.querySelector(".js-sell");
+async function setBuySellValues() {
+  const buyEl = document.querySelector(".js-buy");
+  const sellEl = document.querySelector(".js-sell");
 
-  buy.innerHTML = data.buy;
-  sell.innerHTML = data.sell;
+  const { buy, sell } = await getPrice();
+
+  buyEl.innerHTML = buy;
+  sellEl.innerHTML = sell;
 };
 
-getPrice(setValues);
+setBuySellValues();

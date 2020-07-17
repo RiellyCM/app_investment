@@ -1,7 +1,7 @@
-async function getPrice() {
+async function getVolume() {
   const token = localStorage.getItem('token');
 
-  const priceFetchInfo = {
+  const volumeFetchInfo = {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -10,7 +10,7 @@ async function getPrice() {
   };
 
   try {
-    const response = await fetch("https://desafio-api.devzz.ninja/btc/price", priceFetchInfo);
+    const response = await fetch("https://desafio-api.devzz.ninja/volume", volumeFetchInfo)
     const data = await response.json();
 
     if (response.status === 201) {

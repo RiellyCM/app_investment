@@ -26,7 +26,6 @@ body {
     flex-direction: row;
     position: relative;
     z-index: 1;
-    margin: 10px 0;
     padding: 20px 10px 0;
     justify-content: space-around;
 }
@@ -38,7 +37,11 @@ body {
 }
 
 .box_main--style {
-    width: 30%;
+    margin: 18px;
+}
+
+.distribution {
+    width: 80%;
 }
 
 .box_main::before {

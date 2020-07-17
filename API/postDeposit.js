@@ -1,11 +1,11 @@
-async function postPurchase(amountValue) {
+async function postDeposit(amountValue) {
   const token = localStorage.getItem('token');
 
   const requestBody = {
     amount: amountValue,
   };
 
-  const buyFetchInfo = {
+  const depositFetchInfo = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -15,15 +15,15 @@ async function postPurchase(amountValue) {
   };
 
   try {
-    const response = await fetch("https://desafio-api.devzz.ninja/btc/purchase", buyFetchInfo)
+    const response = await fetch("https://desafio-api.devzz.ninja/account/deposit", depositFetchInfo)
     const data = await response.json();
 
-    if (response.status === 201) {
+    if (response.status === 200) {
       return data;
     } else {
       console.log(data.message)
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };

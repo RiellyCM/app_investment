@@ -1,7 +1,7 @@
-async function getPrice() {
+async function getPosition() {
   const token = localStorage.getItem('token');
 
-  const priceFetchInfo = {
+  const positionFetchInfo = {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -10,10 +10,11 @@ async function getPrice() {
   };
 
   try {
-    const response = await fetch("https://desafio-api.devzz.ninja/btc/price", priceFetchInfo);
+    const response = await fetch("https://desafio-api.devzz.ninja/btc", positionFetchInfo)
     const data = await response.json();
 
-    if (response.status === 201) {
+    if (response.status === 200) {
+      console.log(data)
       return data;
     } else {
       console.log(data.message);

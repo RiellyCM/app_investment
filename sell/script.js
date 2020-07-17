@@ -1,8 +1,8 @@
-const depositForm = document.querySelector(".js-form-deposit");
+const sellForm = document.querySelector(".js-form-sell");
 const token = localStorage.getItem('token');
 
   function getAmountValue() {
-      const formData = new FormData(depositForm);
+      const formData = new FormData(sellForm);
       const amountValue = Number(formData.get("amount"));
 
       return amountValue;
@@ -10,21 +10,20 @@ const token = localStorage.getItem('token');
 
   async function handleUserConfirmation() {
     const amountValue = getAmountValue();
-    const data = await postDeposit(amountValue);
+    const data = await postSell(amountValue);
 
 
-    alert(`Depósito efetuado com sucesso!
-      Seu saldo atual é ${data.balance}`);
+    alert(`Venda efetuada com sucesso!`);
     window.location.href = "../dashboard/index.html";
   }
 
   async function handleFormSubmit(event) {
     event.preventDefault();
 
-    const message = "Confirmar depósito?";
+    const message = "Você tem certeza que deseja vender?";
 
     if (window.confirm(message)) {
         handleUserConfirmation();
     }
   };
-depositForm.addEventListener("submit", handleFormSubmit);
+sellForm.addEventListener("submit", handleFormSubmit);

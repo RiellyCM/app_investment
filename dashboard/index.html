@@ -12,8 +12,8 @@
     <div class="container_dashboard">
       <div class="content_buttons">
          <a class="button_anchor" href="../deposit/index.html"> Depositar </a>
-         <a class="button_anchor" href="../buy/index.html"> Comprar </a>
-         <a class="button_anchor" href=""> Vender </a>
+         <a class="button_anchor" href="../purchase/index.html"> Comprar </a>
+         <a class="button_anchor" href="../sell/index.html"> Vender </a>
          <a class="button_anchor" href=""> Extrato </a>
       </div>
 
@@ -35,34 +35,34 @@
       </div>
 
       <div class="sub_container">
-        <div class="box_main box_main--style">
+        <div class="box_main box_main--style distribution">
             <div class="box_group">
               <p class="title"> Data de compra </p>
-              <p class="subtitle"></p>
+              <p class="subtitle js-position-day"></p>
             </div>
 
             <div class="box_group">
               <p class="title"> Valor investido </p>
-              <p class="subtitle"> </p>
+              <p class="subtitle js-position-investment"> </p>
+            </div>
+
+            <div class="box_group">
+              <p class="title"> Valor bitcoins </p>
+              <p class="subtitle js-position-btc"> </p>
+            </div>
+
+            <div class="box_group">
+              <p class="title"> variação do preço </p>
+              <p class="subtitle js-position-price"> </p>
+            </div>
+
+            <div class="box_group">
+              <p class="title"> valor bruto  </p>
+              <p class="subtitle js-position-value"></p>
             </div>
         </div>
 
-        <div class="box_main box_main--style">
-          <div class="box_group">
-            <p class="title"> Valor bitcoins </p>
-            <p class="subtitle"> </p>
-          </div>
 
-          <div class="box_group">
-            <p class="title"> variação do preço </p>
-            <p class="subtitle"> </p>
-          </div>
-
-          <div class="box_group">
-            <p class="title"> valor bruto  </p>
-            <p class="subtitle"></p>
-          </div>
-        </div>
 
         <div class="box_main box_main--style">
           <div class="box_group ">
@@ -83,6 +83,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
     <script src="../API/getPrice.js"></script>
+    <script src="../API/getBalance.js"></script>
+    <script src="../API/getVolume.js"></script>
+    <script src="../API/getPosition.js"></script>
 
     <script src="balance/script.js"></script>
     <script src="price/script.js"></script>
