@@ -35,34 +35,34 @@
       </div>
 
       <div class="sub_container">
-        <div class="box_main box_main--style">
+        <div class="box_main box_main--style distribution">
             <div class="box_group">
               <p class="title"> Data de compra </p>
-              <p class="subtitle"></p>
+              <p class="subtitle js-position-day"></p>
             </div>
 
             <div class="box_group">
               <p class="title"> Valor investido </p>
-              <p class="subtitle"> </p>
+              <p class="subtitle js-position-investment"> </p>
+            </div>
+
+            <div class="box_group">
+              <p class="title"> Valor bitcoins </p>
+              <p class="subtitle js-position-btc"> </p>
+            </div>
+
+            <div class="box_group">
+              <p class="title"> variação do preço </p>
+              <p class="subtitle js-position-price"> </p>
+            </div>
+
+            <div class="box_group">
+              <p class="title"> valor bruto  </p>
+              <p class="subtitle js-position-value"></p>
             </div>
         </div>
 
-        <div class="box_main box_main--style">
-          <div class="box_group">
-            <p class="title"> Valor bitcoins </p>
-            <p class="subtitle"> </p>
-          </div>
 
-          <div class="box_group">
-            <p class="title"> variação do preço </p>
-            <p class="subtitle"> </p>
-          </div>
-
-          <div class="box_group">
-            <p class="title"> valor bruto  </p>
-            <p class="subtitle"></p>
-          </div>
-        </div>
 
         <div class="box_main box_main--style">
           <div class="box_group ">
@@ -84,6 +84,8 @@
 
     <script src="../API/getPrice.js"></script>
     <script src="../API/getBalance.js"></script>
+    <script src="../API/getVolume.js"></script>
+    <script src="../API/getPosition.js"></script>
 
     <script src="balance/script.js"></script>
     <script src="price/script.js"></script>
