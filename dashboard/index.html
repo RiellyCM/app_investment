@@ -17,52 +17,23 @@
          <a class="button_anchor" href=""> Extrato </a>
       </div>
 
-      <div class="box_main">
-        <div class="box_group">
-          <p class="title"> Saldo R$: </p>
-          <p class="subtitle js-balance"> </p>
-        </div>
-
-        <div class="box_group">
-          <p class="title"> Valor compra </p>
-          <p class="subtitle js-buy"> </p>
-        </div>
-
-        <div class="box_group">
-          <p class="title"> Valor venda </p>
-          <p class="subtitle js-sell">  </p>
-        </div>
-      </div>
-
       <div class="sub_container">
-        <div class="box_main box_main--style distribution">
-            <div class="box_group">
-              <p class="title"> Data de compra </p>
-              <p class="subtitle js-position-day"></p>
-            </div>
+        <div class="box_main">
+          <div class="box_group">
+            <p class="title"> Saldo R$: </p>
+            <p class="subtitle js-balance"> </p>
+          </div>
 
-            <div class="box_group">
-              <p class="title"> Valor investido </p>
-              <p class="subtitle js-position-investment"> </p>
-            </div>
+          <div class="box_group">
+            <p class="title"> Valor compra </p>
+            <p class="subtitle js-buy"> </p>
+          </div>
 
-            <div class="box_group">
-              <p class="title"> Valor bitcoins </p>
-              <p class="subtitle js-position-btc"> </p>
-            </div>
-
-            <div class="box_group">
-              <p class="title"> variação do preço </p>
-              <p class="subtitle js-position-price"> </p>
-            </div>
-
-            <div class="box_group">
-              <p class="title"> valor bruto  </p>
-              <p class="subtitle js-position-value"></p>
-            </div>
+          <div class="box_group">
+            <p class="title"> Valor venda </p>
+            <p class="subtitle js-sell">  </p>
+          </div>
         </div>
-
-
 
         <div class="box_main box_main--style">
           <div class="box_group ">
@@ -76,6 +47,25 @@
           </div>
         </div>
       </div>
+
+  <section class="table-section">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="title_table"> Posição dos investimentos </th>
+        <tr>
+            <tr>
+               <th class="title"> Data de compra </th>
+               <th class="title"> Valor investido </th>
+               <th class="title"> Valor bitcoins </th>
+               <th class="title"> Variação de preço </th>
+               <th class="title"> Valor bruto </th>
+            </tr>
+      </thead>
+      <tbody class="js-body-table"> </tbody>
+    </table>
+  </section>
+
 
       <canvas class="graph js-history"></canvas>
     </div>

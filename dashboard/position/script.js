@@ -1,25 +1,33 @@
 async function setPositionValues() {
-  const dayEl = document.querySelector(".js-position-day");
-  const investmentEl = document.querySelector(".js-position-investment");
-  const btcEl = document.querySelector(".js-position-btc");
-  const priceEl = document.querySelector(".js-position-price");
-  const valueEl = document.querySelector(".js-position-value");
+  const tableBodyEl = document.querySelector(".js-body-table");
 
   const positions = await getPosition();
 
- const {
-    purchasedDate,
-    purchasePrice,
-    currentPrice,
-    purchasedBtcAmount,
-    variation
-  } = await positions[positions.length - 1];
+  const rows = positions.map((position) => {
+    const row =  document.createElement("tr");
 
-  dayEl.innerHTML = purchasedDate;
-  investmentEl.innerHTML = purchasedBtcAmount;
-  btcEl.innerHTML = purchasedBtcAmount;
-  priceEl.innerHTML = currentPrice;
-  valueEl.innerHTML = variation;
-};
+    const positionKeys = Object.keys(position);
+
+    positionKeys.forEach((positionKey) => {
+      if (positionKey === "id" || positionKey === "sellAmount" || positionKey === "purchasedBtcAmount" || positionKey === "purchasePrice") {
+        return
+      }
+
+      const col = document.createElement("td");
+      col.innerHTML = position[positionKey];
+      row.appendChild(col);
+    });
+
+    return row;
+  });
+
+  const fragment = document.createDocumentFragment();
+
+  rows.forEach((row) => {
+    fragment.appendChild(row);
+  });
+
+  tableBodyEl.appendChild(fragment);
+  };
 
 setPositionValues();
