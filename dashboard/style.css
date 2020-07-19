@@ -5,6 +5,11 @@ body {
     height: 100vh;
 }
 
+@media (min-width:600px) {
+  position: relative;
+  height: 100vh;
+}
+
 .container_dashboard {
   margin: 10px;
 }
@@ -43,6 +48,14 @@ body {
     width: 100%;
     border-collapse: collapse;
     font-family: monospace;
+}
+
+@media (max-width:600px) {
+  .table {
+    width: 50%;
+    font-size: 15px;
+    text-transform: none;
+  }
 }
 
 .table-section {
@@ -98,7 +111,6 @@ body {
     letter-spacing: 2px;
     color: #994daa;
     text-transform: uppercase;
-    word-wrap: break-word;
 }
 
 .subtitle {

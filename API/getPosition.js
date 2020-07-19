@@ -12,7 +12,7 @@ async function getPosition() {
   try {
     const response = await fetch("https://desafio-api.devzz.ninja/btc", positionFetchInfo)
     const data = await response.json();
-
+    
     if (response.status === 200) {
       console.log(data)
       return data;

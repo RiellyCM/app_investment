@@ -5,18 +5,27 @@ async function setPositionValues() {
 
   const rows = positions.map((position) => {
     const row =  document.createElement("tr");
-
     const positionKeys = Object.keys(position);
 
-    positionKeys.forEach((positionKey) => {
-      if (positionKey === "id" || positionKey === "sellAmount" || positionKey === "purchasedBtcAmount" || positionKey === "purchasePrice") {
-        return
-      }
+    //add date col
+    const dateCol = document.createElement("td");
+    dateCol.innerHTML = position.purchaseDate;
+    row.appendChild(dateCol);
 
-      const col = document.createElement("td");
-      col.innerHTML = position[positionKey];
-      row.appendChild(col);
-    });
+    //add invested col
+    const investedCol = document.createElement("td");
+    investedCol.innerHTML = position.purchaseAmount * position.purchasePrice;
+    row.appendChild(investedCol);
+
+    //add variation
+    const variationCol = document.createElement("td");
+    variationCol.innerHTML = position.variation;
+    row.appendChild(variationCol);
+
+    //add grossAmountCol
+    const grossAmountCol = document.createElement("td");
+    grossAmountCol.innerHTML = position.currentBtcAmount * position.currentPrice;
+    row.appendChild(grossAmountCol);
 
     return row;
   });
