@@ -20,6 +20,10 @@ async function postPurchase(amountValue) {
 
     if (response.status === 201) {
       return data;
+    }
+
+    if (response.status === 500 && data.name === "TokenExpiredError") {
+     window.location.href = "../user_login/index.html";
     } else {
       console.log(data.message)
     }
