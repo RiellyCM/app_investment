@@ -1,9 +1,13 @@
 async function setBalanceValue() {
   const balanceEl = document.querySelector(".js-balance");
 
-  const { balance } = await getBalance();
+  const balanceData = await getBalance();
 
-  balanceEl.innerHTML = balance;
+  if (!balanceData) {
+    return;
+  }
+
+  balanceEl.innerHTML = balanceData.balance;
 };
 
 setBalanceValue();

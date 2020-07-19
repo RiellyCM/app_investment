@@ -1,12 +1,15 @@
 async function setVolumeValue() {
   const buyEl = document.querySelector(".js-volume-buy");
   const sellEl = document.querySelector(".js-volume-sell");
-  const token = localStorage.getItem('token');
 
-  const { buy, sell } = await getVolume();
+  const volumeData = await getVolume();
 
-  buyEl.innerHTML = buy;
-  sellEl.innerHTML = sell;
+  if (!volumeData) {
+    return;
+  }
+
+  buyEl.innerHTML = volumeData.buy;
+  sellEl.innerHTML = volumeData.sell;
 };
 
 setVolumeValue();

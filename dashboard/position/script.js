@@ -3,6 +3,10 @@ async function setPositionValues() {
 
   const positions = await getPosition();
 
+  if (!positions || !positions.length) {
+      return;
+  }
+
   const rows = positions.map((position) => {
     const row =  document.createElement("tr");
     const positionKeys = Object.keys(position);
