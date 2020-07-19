@@ -5,26 +5,29 @@ body {
     height: 100vh;
 }
 
-@media (min-width:600px) {
-  position: relative;
-  height: 100vh;
-}
+  .dashboard {
+    margin: 10px;
+  }
 
-.container_dashboard {
-  margin: 10px;
-}
+  .dashboard__buttons {
+    margin: 10px 0;
+  }
 
-.content_buttons {
-  margin: 10px 0;
-}
-
-.button_anchor {
+  .dashboard__button {
     margin-right: 10px;
     color: #994daa;
     text-decoration: none;
-}
+  }
 
-.box_main {
+  .dashboard__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .dashboard__card {
     background-color: #282f46;
     border-radius: 20px 20px 5px 5px;
     display: flex;
@@ -34,63 +37,17 @@ body {
     padding: 20px 10px 0;
     justify-content: space-around;
     width: 100%;
-}
-
-.sub_container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: monospace;
-}
-
-@media (max-width:600px) {
-  .table {
-    width: 50%;
-    font-size: 15px;
-    text-transform: none;
-  }
-}
-
-.table-section {
-  margin: 10px;
-}
-
-.title_table {
-    color: #994daa;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 13px;
   }
 
-  td,
-  th {
-      border: 1px solid #8854c3;
-      text-align: center;
-      padding: 10px;
-      background-color: #282f46;
-  }
-
-
-.box_main--style {
+  .dashboard__card--small {
     width: auto;
     margin-top: 0px;
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 0px;
-}
+  }
 
-.distribution {
-    width: 80%;
-}
-
-.box_main::before {
+  .dashboard__card::before {
     position: absolute;
     background-color: rgba(136,84,195,0.7);
     border-radius: 20px 20px 5px 5px;
@@ -100,30 +57,48 @@ body {
     content:"";
     top: 0;
     left: 0;
-}
+  }
 
-.box_group {
+  .dashboard__group {
     text-align: center;
-}
+  }
 
-.title {
-    font-size: 10px;
-    letter-spacing: 2px;
+  .dashboard__title {
     color: #994daa;
+    text-align: center;
     text-transform: uppercase;
-}
+    font-size: 13px;
+  }
 
-.subtitle {
+  .dashboard__subtitle {
     font-size: 22px;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
     color: #c2c6d0;
-}
+  }
 
-.graph {
+  .dashboard__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: monospace;
+  }
+
+  .dashboard__table-section {
+    margin: 10px;
+  }
+
+  td,
+  th {
+    border: 1px solid #8854c3;
+    text-align: center;
+    padding: 10px;
+    background-color: #282f46;
+  }
+
+  .graph {
     background-color: #FFFAF0;
     width: 100%;
     margin: auto;
     padding-bottom: 10px;
-}
+  }
