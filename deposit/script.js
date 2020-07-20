@@ -1,5 +1,4 @@
 const depositForm = document.querySelector(".js-form-deposit");
-const token = localStorage.getItem('token');
 
   function getAmountValue() {
       const formData = new FormData(depositForm);
