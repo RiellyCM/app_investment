@@ -27,6 +27,12 @@ body {
     margin-bottom: 10px;
   }
 
+  @media (max-width:600px) {
+    .dashboard__container {
+      display: block;
+    }
+  }
+
   .dashboard__card {
     background-color: #282f46;
     border-radius: 20px 20px 5px 5px;
@@ -37,6 +43,13 @@ body {
     padding: 20px 10px 0;
     justify-content: space-around;
     width: 100%;
+  }
+
+  @media (max-width:600px) {
+    .dashboard__card {
+      width: auto;
+      margin-bottom: 10px
+    }
   }
 
   .dashboard__card--small {
@@ -71,8 +84,7 @@ body {
   }
 
   .dashboard__subtitle {
-    font-size: 22px;
-    text-transform: uppercase;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     color: #c2c6d0;
@@ -95,6 +107,14 @@ body {
     padding: 10px;
     background-color: #282f46;
   }
+
+  @media (max-width:600px) {
+    td,
+    th {
+      padding: 3px;
+    }
+  }
+
 
   .graph {
     background-color: #FFFAF0;

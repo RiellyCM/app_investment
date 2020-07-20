@@ -4,7 +4,7 @@ body {
   margin: 0;
 }
 
-.conteiner_deposit {
+.deposit {
   height: 100%;
   display: flex;
   padding: 50px 0;
@@ -13,7 +13,7 @@ body {
   align-content: center;
 }
 
-.box_deposit {
+.deposit__form__section {
   height: 100%;
   width: 50%;
   border-radius: 6px;
@@ -28,7 +28,7 @@ body {
   background-color: #ffffff;
 }
 
-.label {
+.deposit__label {
   display: block;
   font-size: 20px;
   padding: 15px;
@@ -36,14 +36,14 @@ body {
   text-transform: uppercase;
  }
 
-.input {
+.deposit__input {
   display: block;
   margin: 0 0 20px;
   padding: 15px 15px;
   width: 84%;
 }
 
-.button_deposit {
+.deposit__button {
   background:  #994daa;
   color: #f5f3f0;
   border: 0px;

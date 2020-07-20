@@ -1,66 +1,67 @@
-body {
-  font: 14px "Roboto", sans-serif;
-}
-.conteiner {
-  height: 100%;
-  display: flex;
-  padding: 50px 0;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
+  body {
+    font: 14px "Roboto", sans-serif;
+  }
 
-.box {
-  height: 100%;
-  width: 350px;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
-  padding: 20px 30px;
-  background: #fafaff;
-}
+  .register {
+    height: 100%;
+    display: flex;
+    padding: 50px 0;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
 
-.title_user {
-  margin: 10px;
-}
+  .register__form__section {
+    height: 100%;
+    width: 350px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    padding: 20px 30px;
+    background: #fafaff;
+  }
 
-.form {
-  padding: 10px 10px;
-  display: block;
-}
+  .register__title__user {
+    margin: 10px;
+  }
 
-.divider {
-  margin: 20px 0;
-  height: 2px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #333;
-  opacity: 0.2;
-  border: 0 none;
-}
+  .form {
+    padding: 10px 10px;
+    display: block;
+  }
 
-.label {
-  display: block;
-  font-size: 20px;
-  margin: 0 0 10px;
- }
+  .divider {
+    margin: 20px 0;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #333;
+    opacity: 0.2;
+    border: 0 none;
+  }
 
-.input {
-  display: block;
-  margin: 0 0 20px;
-  padding: 15px 15px;
-  width: 84%;
-}
+  .register__label {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+   }
 
-.button {
-  background: #fa9f0c;
-  color: #f5f3f0;
-  border: 0px;
-  border-radius: 5%;
-  padding: 10px;
-}
+  .register__input {
+    display: block;
+    margin: 0 0 20px;
+    padding: 15px 15px;
+    width: 84%;
+  }
 
-.button_login {
-  color: #fa9f0c;
-  margin-left: 20px;
-  text-decoration: none;
-}
+  .button {
+    background: #fa9f0c;
+    color: #f5f3f0;
+    border: 0px;
+    border-radius: 5%;
+    padding: 10px;
+  }
+
+  .login__button {
+    color: #fa9f0c;
+    margin-left: 20px;
+    text-decoration: none;
+  }
