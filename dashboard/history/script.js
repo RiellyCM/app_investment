@@ -10,7 +10,6 @@ async function setupData(historyData) {
   const historyCreated = historyData.map((value) => {
       const time = value.createdAt.split("T")[1];
       return time.split(".")[0];
-      //split divide a string a partir do ponto determinado. Nesse caso divide em T e depois divide em . e pega a 1 posição//
   });
 
   return {
